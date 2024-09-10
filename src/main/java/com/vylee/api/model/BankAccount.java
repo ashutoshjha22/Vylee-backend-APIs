@@ -15,7 +15,7 @@ public class BankAccount {
 	private Long vendorId;
 
 	@Column(nullable = false)
-	private String accountName;
+	private String accountHolderName;
 
 	@Column(nullable = false)
 	private String bankAccountNumber;
@@ -43,20 +43,20 @@ public class BankAccount {
 		this.id = id;
 	}
 
-	public Long getVendor_id() {
+	public Long getVendorId() {
 		return vendorId;
 	}
 
-	public void setVendor_id(Long vendor_id) {
-		this.vendorId = vendor_id;
+	public void setVendorId(Long vendorId) {
+		this.vendorId = vendorId;
 	}
 
-	public String getAccountName() {
-		return accountName;
+	public String getAccountHolderName() {
+		return accountHolderName;
 	}
 
-	public void setAccountName(String accountName) {
-		this.accountName = accountName;
+	public void setAccountHolderName(String accountHolderName) {
+		this.accountHolderName = accountHolderName;
 	}
 
 	public String getBankAccountNumber() {
@@ -107,11 +107,5 @@ public class BankAccount {
 		this.address = address;
 	}
 
-	public BankAccount() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	
 
 }

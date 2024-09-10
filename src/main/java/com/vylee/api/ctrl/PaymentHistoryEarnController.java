@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.vylee.api.model.BankAccount;
 import com.vylee.api.model.PaymentHistoryEarn;
 import com.vylee.api.services.PaymentHistoryEarnService;
 
@@ -27,7 +26,7 @@ public class PaymentHistoryEarnController {
 		return paymentHistoryEarnService.getAllPayments();
 	}
 
-	@GetMapping("/show-earn-details/{id}")
+	@GetMapping("/show-earn-details/{vendorId}")
 	public ResponseEntity<List<PaymentHistoryEarn>> getPaymentById(@PathVariable Long vendorId) {
 	List<PaymentHistoryEarn>paymentByvendorId = paymentHistoryEarnService.getPaymentByvendorId(vendorId);
 		return ResponseEntity.ok(paymentByvendorId);

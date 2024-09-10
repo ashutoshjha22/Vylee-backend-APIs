@@ -17,7 +17,7 @@ public class BankAccountServiceImpl implements BankAccountService {
 
 	@Override
 	public BankAccount createAccount(BankAccount bankAccount, Long vendorId) {
-		bankAccount.setVendor_id(vendorId);
+		bankAccount.setVendorId(vendorId);
 		return bankAccountRepository.save(bankAccount);
 	}
 

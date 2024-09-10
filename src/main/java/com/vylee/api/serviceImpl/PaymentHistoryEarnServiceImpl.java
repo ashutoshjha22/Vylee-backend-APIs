@@ -1,6 +1,4 @@
 package com.vylee.api.serviceImpl;
-
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,13 +21,13 @@ public class PaymentHistoryEarnServiceImpl implements PaymentHistoryEarnService 
 
     @Override
   	public List<PaymentHistoryEarn> getPaymentByvendorId(Long vendorId) {
-      	List<PaymentHistoryEarn>findByVenderId = paymentHistoryEarnRepo.findByVendorId(vendorId);
-          return findByVenderId;
+      	List<PaymentHistoryEarn>findByVendorId = paymentHistoryEarnRepo.findByVendorId(vendorId);
+          return findByVendorId;
       }
 
     @Override
   	public PaymentHistoryEarn createPayment(PaymentHistoryEarn paymentHistoryEarn, Long vendorId) {
-      	paymentHistoryEarn.setVenderId(vendorId);
+      	paymentHistoryEarn.setVendorId(vendorId);
           return paymentHistoryEarnRepo.save(paymentHistoryEarn);
       }
 }

@@ -6,6 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.vylee.api.model.PaymentHistoryWithdrawals;
 
 public interface PaymentHistoryWithdrawalsRepo extends JpaRepository<PaymentHistoryWithdrawals, Long> {
-	List<PaymentHistoryWithdrawals> findByVendorId(Long vendor_id);
+	List<PaymentHistoryWithdrawals> findByVendorId(Long vendorId);
 
 }

@@ -25,7 +25,7 @@ public class PaymentHistoryWithdrawalsCtrl {
         return paymentHistoryWithdrawalsService.getAllPayments();
     }
 
-	    @GetMapping("/show-withdraw-details/{id}")
+	    @GetMapping("/show-withdraw-details/{vendorId}")
     public ResponseEntity<List<PaymentHistoryWithdrawals>> getPaymentById(@PathVariable Long vendorId) {
 	    List<PaymentHistoryWithdrawals>paymentByvendorId = paymentHistoryWithdrawalsService.getPaymentByvendorId(vendorId);
         return ResponseEntity.ok(paymentByvendorId);

@@ -27,7 +27,7 @@ public class PaymentHistoryRefundsCtrl {
 		return paymentHistoryRefundsService.getAllPayments();
 	}
 
-	@GetMapping("/show-refund-details/{id}")
+	@GetMapping("/show-refund-details/{vendorId}")
 	public ResponseEntity<List<PaymentHistoryRefunds>> getPaymentById(@PathVariable Long vendorId) {
 		List<PaymentHistoryRefunds> paymentByvendorId = paymentHistoryRefundsService.getPaymentByvendorId(vendorId);
 		return ResponseEntity.ok(paymentByvendorId);

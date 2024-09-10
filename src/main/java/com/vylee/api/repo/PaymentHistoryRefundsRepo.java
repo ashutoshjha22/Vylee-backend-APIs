@@ -9,6 +9,6 @@ import com.vylee.api.model.PaymentHistoryRefunds;
 
 
 public interface PaymentHistoryRefundsRepo extends JpaRepository<PaymentHistoryRefunds, Long> {
-	List<PaymentHistoryRefunds> findByVendorId(Long vendor_id);
+	List<PaymentHistoryRefunds> findByVendorId(Long vendoriId);
 
 }

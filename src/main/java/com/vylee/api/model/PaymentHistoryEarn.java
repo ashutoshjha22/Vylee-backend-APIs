@@ -15,7 +15,7 @@ public class PaymentHistoryEarn {
     private Long id;
     
     @Column(nullable = false)
-    private Long venderId;
+    private Long vendorId;
     
     @Column(nullable = false)
     private String serviceName; 
@@ -33,12 +33,12 @@ public class PaymentHistoryEarn {
 		this.id = id;
 	}
 
-	public Long getVenderId() {
-		return venderId;
+	public Long getVendorId() {
+		return vendorId;
 	}
 
-	public void setVenderId(Long venderId) {
-		this.venderId = venderId;
+	public void setVendorId(Long vendorId) {
+		this.vendorId = vendorId;
 	}
 
 	public String getServiceName() {

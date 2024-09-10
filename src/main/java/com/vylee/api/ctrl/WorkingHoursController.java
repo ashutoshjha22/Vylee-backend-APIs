@@ -35,8 +35,8 @@ public class WorkingHoursController {
     }
 
     @PostMapping("/add-working-hours/{vendorId}")
-    public ResponseEntity<WorkingHours> createWorkingHours(@RequestBody WorkingHours workingHours,@PathVariable Long venderId) {
-    	WorkingHours createWorkingHours = workingHoursService.createWorkingHours(workingHours, venderId);
+    public ResponseEntity<WorkingHours> createWorkingHours(@RequestBody WorkingHours workingHours,@PathVariable Long vendorId) {
+    	WorkingHours createWorkingHours = workingHoursService.createWorkingHours(workingHours, vendorId);
         return ResponseEntity.ok(createWorkingHours);
     }
     

@@ -6,12 +6,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.vylee.api.model.BankAccount;
-import com.vylee.api.model.PaymentHistoryEarn;
 import com.vylee.api.model.PaymentHistoryWithdrawals;
-import com.vylee.api.repo.PaymentHistoryEarnRepo;
 import com.vylee.api.repo.PaymentHistoryWithdrawalsRepo;
-import com.vylee.api.services.PaymentHistoryEarnService;
 import com.vylee.api.services.PaymentHistoryWithdrawalsService;
 
 @Service
@@ -27,13 +23,13 @@ public class PaymentHistoryWithdrawalsServiceImpl implements PaymentHistoryWithd
 
     @Override
 	public List<PaymentHistoryWithdrawals> getPaymentByvendorId(Long vendorId) {
-    	List<PaymentHistoryWithdrawals>findByVenderId = paymentHistoryWithdrawalsRepo.findByVendorId(vendorId);
-        return findByVenderId;
+    	List<PaymentHistoryWithdrawals>findByVendorId = paymentHistoryWithdrawalsRepo.findByVendorId(vendorId);
+        return findByVendorId;
     }
 
     @Override
 	public PaymentHistoryWithdrawals createPayment(PaymentHistoryWithdrawals paymentHistoryWithdrawals, Long vendorId) {
-    	paymentHistoryWithdrawals.setVenderId(vendorId);
+    	paymentHistoryWithdrawals.setVendorId(vendorId);
         return paymentHistoryWithdrawalsRepo.save(paymentHistoryWithdrawals);
     }
 

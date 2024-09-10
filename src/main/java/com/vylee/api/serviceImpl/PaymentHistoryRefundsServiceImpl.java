@@ -23,13 +23,13 @@ public class PaymentHistoryRefundsServiceImpl implements PaymentHistoryRefundsSe
 
     @Override
   	public List<PaymentHistoryRefunds> getPaymentByvendorId(Long vendorId) {
-      	List<PaymentHistoryRefunds>findByVenderId = paymentHistoryRefundsRepo.findByVendorId(vendorId);
-          return findByVenderId;
+      	List<PaymentHistoryRefunds>findByVendorId = paymentHistoryRefundsRepo.findByVendorId(vendorId);
+          return findByVendorId;
       }
 
       @Override
   	public PaymentHistoryRefunds createPayment(PaymentHistoryRefunds paymentHistoryRefunds, Long vendorId) {
-    	  paymentHistoryRefunds.setVenderId(vendorId);
+    	  paymentHistoryRefunds.setVendorId(vendorId);
           return paymentHistoryRefundsRepo.save(paymentHistoryRefunds);
       }
 
